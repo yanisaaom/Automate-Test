@@ -57,53 +57,6 @@ When("คลิกปุ่ม Sync {string}", { timeout: 65000 }, async (text) 
 });
 
 //-----------------------------------------
-// ตรวจสอบ Tooltip ชื่อผู้ใช้
-When("นำเมาส์ไปวาง ชื่อผู้ใช้ {string}", { timeout: 65000 }, async (text) => {
-  await page.getByText('gen account (ไทย)').hover();
-});
-
- When('นำเมาส์ออก', { timeout: 65000 }, async function () {
-    // ย้ายเมาส์ไปยังตำแหน่งมุมซ้ายบน (0, 0) เพื่อให้ Tooltip หายไป (ยกเลิกการ hover)
-    await page.mouse.move(0, 0); 
-});
-
-// ตรวจสอบ Tooltip Department
-When("นำเมาส์ไปวาง Department {string}", { timeout: 65000 }, async (text) => {
-  await page.getByText('Transform').nth(2).hover();
-  await page.mouse.move(0, 0);
-});
-
-// ตรวจสอบ Tooltip Position
-When("นำเมาส์ไปวาง Position {string}", { timeout: 65000 }, async (text) => {
-  await page.getByText('นักวิเคราะห์ระบบ').nth(1).hover();
-  await page.mouse.move(0, 0);
-});
-
-// ตรวจสอบ Tooltip Permission status
-When("นำเมาส์ไปวาง Permission {string}", { timeout: 65000 }, async (text) => {
-  await page.getByText('Implementer').hover();
-  await page.mouse.move(0, 0);
-});
-
-// ตรวจสอบ Tooltip เบอร์โทร
-When("นำเมาส์ไปวาง เบอร์โทร {string}", { timeout: 65000 }, async (text) => {
-  await page.locator('#root').getByText('-777-4444').hover();
-  await page.mouse.move(0, 0);
-});
-
-// ตรวจสอบ Tooltip Email
-When("นำเมาส์ไปวาง Email {string}", { timeout: 65000 }, async (text) => {
-  await page.getByText('jeerawat62009@gmail.com').nth(1).hover();
-  await page.mouse.move(0, 0);
-});
-
-// ตรวจสอบ Tooltip LineID
-When("นำเมาส์ไปวาง LineID {string}", { timeout: 65000 }, async (text) => {
-  await page.locator('#root').getByText('Wilaiwan').hover();
-  await page.mouse.move(0, 0);
-});
-
-//-----------------------------------------
 // ทดสอบการค้นหาด้วย Name
 When("ค้นหาด้วย Name {string}", { timeout: 65000 }, async (text) => {
   await page.locator('#input_text_button_search_ticket_permission').click();
@@ -209,6 +162,53 @@ When('คลิกค้นหา {string}', { timeout: 65000 }, async function 
 // ทดสอบการ Clear ข้อมูลค้นหา
 When("คลิกปุ่ม Clear {string}", { timeout: 65000 }, async (text) => {
   await page.getByRole('button', { name: 'delete Clear' }).click();
+});
+
+//-----------------------------------------
+// ตรวจสอบ Tooltip ชื่อผู้ใช้
+When("นำเมาส์ไปวาง ชื่อผู้ใช้ {string}", { timeout: 65000 }, async (text) => {
+  await page.getByText('gen account (ไทย)').hover();
+});
+
+ When('นำเมาส์ออก', { timeout: 65000 }, async function () {
+    // ย้ายเมาส์ไปยังตำแหน่งมุมซ้ายบน (0, 0) เพื่อให้ Tooltip หายไป (ยกเลิกการ hover)
+    await page.mouse.move(0, 0); 
+});
+
+// ตรวจสอบ Tooltip Department
+When("นำเมาส์ไปวาง Department {string}", { timeout: 65000 }, async (text) => {
+  await page.getByText('Transform').nth(2).hover();
+  await page.mouse.move(0, 0);
+});
+
+// ตรวจสอบ Tooltip Position
+When("นำเมาส์ไปวาง Position {string}", { timeout: 65000 }, async (text) => {
+  await page.getByText('นักวิเคราะห์ระบบ').nth(1).hover();
+  await page.mouse.move(0, 0);
+});
+
+// ตรวจสอบ Tooltip Permission status
+//When("นำเมาส์ไปวาง Permission {string}", { timeout: 65000 }, async (text) => {
+  //await page.getByText('Implementer').hover();
+  //await page.mouse.move(0, 0);
+//});
+
+// ตรวจสอบ Tooltip เบอร์โทร
+When("นำเมาส์ไปวาง เบอร์โทร {string}", { timeout: 65000 }, async (text) => {
+  await page.locator('#root').getByText('-777-4444').hover();
+  await page.mouse.move(0, 0);
+});
+
+// ตรวจสอบ Tooltip Email
+When("นำเมาส์ไปวาง Email {string}", { timeout: 65000 }, async (text) => {
+  await page.getByText('jeerawat62009@gmail.com').nth(1).hover();
+  await page.mouse.move(0, 0);
+});
+
+// ตรวจสอบ Tooltip LineID
+When("นำเมาส์ไปวาง LineID {string}", { timeout: 65000 }, async (text) => {
+  await page.locator('#root').getByText('Wilaiwan').hover();
+  await page.mouse.move(0, 0);
 });
 
 //-----------------------------------------

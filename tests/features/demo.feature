@@ -18,43 +18,7 @@ Scenario: ทดสอบการเข้าถึงหน้า Permission
 # TC-PM-002 : ทดสอบการคลิกปุ่ม Sync
 Scenario: ทดสอบการคลิกปุ่ม Sync
     When คลิกปุ่ม Sync "Sync"
-
-# TC-PM-005 : ตรวจสอบ Tooltip ชื่อผู้ใช้
-Scenario: ตรวจสอบ Tooltip ชื่อผู้ใช้
-    When นำเมาส์ไปวาง ชื่อผู้ใช้ "gen account (ไทย)"
-    When นำเมาส์ออก
-
-# TC-PM-005.1 : ตรวจสอบ Tooltip Department
-Scenario: ตรวจสอบ Tooltip Department
-    When นำเมาส์ไปวาง Department "Transform"
-    When นำเมาส์ออก
-
-# TC-PM-005.2 : ตรวจสอบ Tooltip Position
-Scenario: ตรวจสอบ Tooltip Position
-    When นำเมาส์ไปวาง Position "นักวิเคราะห์ระบบ"
-    When นำเมาส์ออก
-
-# TC-PM-005.3 : ตรวจสอบ Tooltip Permission
-Scenario: ตรวจสอบ Tooltip Permission
-    When นำเมาส์ไปวาง Permission "Implementer"
-    When นำเมาส์ออก
-
-# TC-PM-005.4 : ตรวจสอบ Tooltip เบอร์โทร
-Scenario: ตรวจสอบ Tooltip เบอร์โทร
-    When นำเมาส์ไปวาง เบอร์โทร "088-777-4444"
-    When นำเมาส์ออก
-
-# TC-PM-005.5 : ตรวจสอบ Tooltip Email
-Scenario: ตรวจสอบ Tooltip Email
-    When นำเมาส์ไปวาง Email "jeerawat62009@gmail.com"
-    When นำเมาส์ออก
-
-# TC-PM-005.6 : ตรวจสอบ Tooltip LineID
-Scenario: ตรวจสอบ Tooltip LineID
-    When นำเมาส์ไปวาง LineID "Wilaiwan"
-    When นำเมาส์ออก
-
-
+    
 # TC-PM-006 : ทดสอบการค้นหาด้วย Name
 Scenario: ทดสอบการค้นหา
     When ค้นหาด้วย Name "Name"
@@ -108,6 +72,41 @@ Scenario: ทดสอบการค้นหา ที่ไม่มีข้
 # TC-PM-009 : ทดสอบ Clear ข้อมูลค้นหา
 Scenario: ทดสอบ Clear ข้อมูลค้นหา 
     When คลิกปุ่ม Clear "Clear"
+
+# TC-PM-005 : ตรวจสอบ Tooltip ชื่อผู้ใช้
+Scenario: ตรวจสอบ Tooltip ชื่อผู้ใช้
+    When นำเมาส์ไปวาง ชื่อผู้ใช้ "gen account (ไทย)"
+    When นำเมาส์ออก
+
+# TC-PM-005.1 : ตรวจสอบ Tooltip Department
+Scenario: ตรวจสอบ Tooltip Department
+    When นำเมาส์ไปวาง Department "Transform"
+    When นำเมาส์ออก
+
+# TC-PM-005.2 : ตรวจสอบ Tooltip Position
+Scenario: ตรวจสอบ Tooltip Position
+    When นำเมาส์ไปวาง Position "นักวิเคราะห์ระบบ"
+    When นำเมาส์ออก
+
+# TC-PM-005.3 : ตรวจสอบ Tooltip Permission
+#Scenario: ตรวจสอบ Tooltip Permission
+#    When นำเมาส์ไปวาง Permission "Implementer"
+ #   When นำเมาส์ออก
+
+# TC-PM-005.4 : ตรวจสอบ Tooltip เบอร์โทร
+Scenario: ตรวจสอบ Tooltip เบอร์โทร
+    When นำเมาส์ไปวาง เบอร์โทร "088-777-4444"
+    When นำเมาส์ออก
+
+# TC-PM-005.5 : ตรวจสอบ Tooltip Email
+Scenario: ตรวจสอบ Tooltip Email
+    When นำเมาส์ไปวาง Email "jeerawat62009@gmail.com"
+    When นำเมาส์ออก
+
+# TC-PM-005.6 : ตรวจสอบ Tooltip LineID
+Scenario: ตรวจสอบ Tooltip LineID
+    When นำเมาส์ไปวาง LineID "Wilaiwan"
+    When นำเมาส์ออก
 
 # TC-PM-010 ทดสอบการสลับจาก List View ไป Card View
 Scenario: ทดสอบการสลับจาก List View ไป Card View
